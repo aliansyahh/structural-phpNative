@@ -24,6 +24,7 @@ if (isset($_POST['cari'])) {
                 </div>
                 <div class="col-5">
                     <a href="tambah.php" class="btn btn-primary btn-sm">Tambah Data</a>
+                    <a href="logout.php" class="btn btn-danger btn-sm">logout</a>
                 </div>
                 <div class="col-3">
                     <form action="" method="post">
