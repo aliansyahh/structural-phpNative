@@ -11,14 +11,18 @@ $mahasiswa = tampil("SELECT * FROM mahasiswa");
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
+                <div class="col-sm-2">
                     <h1>DataTables</h1>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-6">
+                    <a href="tambah.php" class="btn btn-primary btn-sm">Tambah Data</a>
+                </div>
+                <div class="col-sm-4">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">DataTables</li>
@@ -62,7 +66,7 @@ $mahasiswa = tampil("SELECT * FROM mahasiswa");
                                         <td><?= $mhs['jekel']; ?></td>
                                         <td><?= $mhs['npm']; ?></td>
                                         <td><?= $mhs['email']; ?></td>
-                                        <td><?= $mhs['jekel']; ?></td>
+                                        <td><?= $mhs['jurusan']; ?></td>
                                         <td>
                                             <a href="" class="float-right ml-1"><i class="fas fa-trash text-danger"
                                                     title="hapus data"></i>
