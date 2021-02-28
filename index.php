@@ -87,7 +87,7 @@ if (isset($_POST['cari'])) {
                                                     class="fas fa-trash text-danger" title="hapus data"></i>
                                             </a>
                                             <i class="float-right">|</i>
-                                            <a href="edit.php?id=<?= $mhs['id'] ?>" class="float-right mr-1"><i
+                                            <a href="ubah.php?id=<?= $mhs['id'] ?>" class="float-right mr-1"><i
                                                     class="fas fa-edit text-warning" title="edit"></i>
                                             </a>
                                         </td>

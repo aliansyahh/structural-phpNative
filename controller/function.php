@@ -66,6 +66,38 @@ function tambah($post)
     return mysqli_affected_rows($conn);
 }
 
+function ubah($post)
+{
+    global $conn;
+    $gambalama = htmlspecialchars($post['gambarlama']);
+    $id = htmlspecialchars($post['id']);
+    $nama = htmlspecialchars($post['nama']);
+    $jekel = htmlspecialchars($post['jekel']);
+    $npm = htmlspecialchars($post['npm']);
+    $email = htmlspecialchars($post['email']);
+    $jurusan = htmlspecialchars($post['jurusan']);
+    if ($_FILES['gambar']['error'] === 4) {
+        $gambar = $gambalama;
+    } else {
+        $gambar = upload();
+    }
+
+    if (!$gambar) {
+        return false;
+    }
+
+    $query = "UPDATE mahasiswa SET 
+    nama='$nama',
+    jekel='$jekel',
+    npm='$npm',
+    email='$email',
+    jurusan='$jurusan',
+    gambar ='$gambar' WHERE id=$id";
+
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
+
 function hapus($id)
 {
     global $conn;
