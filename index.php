@@ -5,6 +5,9 @@ require_once "template/header.php";
 require_once "template/sidebar.php";
 
 $mahasiswa = tampil("SELECT * FROM mahasiswa");
+if (isset($_POST['cari'])) {
+    $mahasiswa = cari($_POST['keyword']);
+}
 
 
 ?>
@@ -19,10 +22,21 @@ $mahasiswa = tampil("SELECT * FROM mahasiswa");
                 <div class="col-sm-2">
                     <h1>DataTables</h1>
                 </div>
-                <div class="col-6">
+                <div class="col-5">
                     <a href="tambah.php" class="btn btn-primary btn-sm">Tambah Data</a>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-3">
+                    <form action="" method="post">
+                        <div class="input-group mb-3">
+                            <input type="text" name="keyword" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button name="cari" class="btn btn-outline-secondary" type="submit">cari</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">DataTables</li>
