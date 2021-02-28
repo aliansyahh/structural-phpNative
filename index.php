@@ -68,11 +68,13 @@ $mahasiswa = tampil("SELECT * FROM mahasiswa");
                                         <td><?= $mhs['email']; ?></td>
                                         <td><?= $mhs['jurusan']; ?></td>
                                         <td>
-                                            <a href="" class="float-right ml-1"><i class="fas fa-trash text-danger"
-                                                    title="hapus data"></i>
+                                            <a href="hapus.php?id=<?= $mhs['id'] ?>" class="float-right ml-1"><i
+                                                    onclick="return confirm('Yakin Ingin Hapus?')"
+                                                    class="fas fa-trash text-danger" title="hapus data"></i>
                                             </a>
                                             <i class="float-right">|</i>
-                                            <a href="" class="float-right mr-1"><i class="fas fa-edit text-warning"></i>
+                                            <a href="edit.php?id=<?= $mhs['id'] ?>" class="float-right mr-1"><i
+                                                    class="fas fa-edit text-warning" title="edit"></i>
                                             </a>
                                         </td>
                                     </tr>
