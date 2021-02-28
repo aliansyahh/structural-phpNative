@@ -1,5 +1,9 @@
 <?php
-
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location:login.php");
+    exit;
+}
 require_once "controller/function.php";
 require_once "template/header.php";
 require_once "template/sidebar.php";
